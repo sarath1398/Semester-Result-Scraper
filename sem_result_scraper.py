@@ -8,9 +8,10 @@ from requests import get
 #from selenium.common.exceptions import TimeoutException
 options=webdriver.ChromeOptions()
 options.binary_location=r'C:\Program Files (x86)\BraveSoftware\Brave-Browser\Application\brave.exe'
+options.headless(True)
 path=r'C:\Program Files\Python38\Scripts\chromedriver.exe'
 driver=webdriver.Chrome(executable_path=path,options=options)
-driver.minimize_window()
+#driver.minimize_window()
 url='http://karpagam.edu.in/'
 driver.get(url)
 response=get(url)
